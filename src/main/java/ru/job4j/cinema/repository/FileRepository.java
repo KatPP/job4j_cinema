@@ -1,7 +1,6 @@
 package ru.job4j.cinema.repository;
 
 import ru.job4j.cinema.model.File;
-
 import java.util.Optional;
 
 /**
@@ -20,4 +19,12 @@ public interface FileRepository {
      * @return Optional с файлом, если найден, иначе пустой Optional
      */
     Optional<File> findById(int id);
+
+    /**
+     * Сохраняет новый файл
+     *
+     * @param file файл для сохранения
+     * @return Optional с сохраненным файлом, если успешно, иначе пустой Optional
+     */
+    Optional<File> save(File file);
 }

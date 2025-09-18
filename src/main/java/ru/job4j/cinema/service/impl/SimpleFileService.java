@@ -34,7 +34,11 @@ public class SimpleFileService implements FileService {
     @Value("${app.upload.path}")
     private String uploadPath;
 
-
+    /**
+     * Конструктор
+     *
+     * @param fileRepository репозиторий файлов
+     */
     public SimpleFileService(FileRepository fileRepository) {
         this.fileRepository = fileRepository;
     }
@@ -66,11 +70,10 @@ public class SimpleFileService implements FileService {
             file.setName(name);
             file.setPath("/files/" + resultFilename);
 
-            // Здесь нужно реализовать сохранение в репозиторий
-            // Пока возвращаем mock
-
-            return Optional.of(file);
+            // Сохраняем запись о файле в репозитории
+            return fileRepository.save(file);
         } catch (IOException e) {
+            e.printStackTrace();
             return Optional.empty();
         }
     }
