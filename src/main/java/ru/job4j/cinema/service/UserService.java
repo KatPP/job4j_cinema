@@ -1,17 +1,17 @@
-package ru.job4j.cinema.repository;
+package ru.job4j.cinema.service;
 
 import ru.job4j.cinema.model.User;
 
 import java.util.Optional;
 
 /**
- * Интерфейс репозитория для работы с пользователями
- * Предоставляет методы для доступа к данным пользователей в базе данных
+ * Интерфейс сервиса для работы с пользователями
+ * Предоставляет бизнес-логику для работы с пользователями
  *
  * @author Константин
  * @version 1.0
  */
-public interface UserRepository {
+public interface UserService {
 
     /**
      * Сохраняет нового пользователя
@@ -29,12 +29,4 @@ public interface UserRepository {
      * @return Optional с пользователем, если найден, иначе пустой Optional
      */
     Optional<User> findByEmailAndPassword(String email, String password);
-
-    /**
-     * Находит пользователя по email
-     *
-     * @param email email пользователя
-     * @return Optional с пользователем, если найден, иначе пустой Optional
-     */
-    Optional<User> findByEmail(String email);
 }
