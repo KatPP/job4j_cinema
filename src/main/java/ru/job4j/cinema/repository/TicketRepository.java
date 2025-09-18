@@ -1,6 +1,7 @@
 package ru.job4j.cinema.repository;
 
 import ru.job4j.cinema.model.Ticket;
+
 import java.util.Optional;
 
 /**
@@ -23,8 +24,8 @@ public interface TicketRepository {
     /**
      * Проверяет доступность места
      *
-     * @param sessionId идентификатор сеанса
-     * @param rowNumber номер ряда
+     * @param sessionId   идентификатор сеанса
+     * @param rowNumber   номер ряда
      * @param placeNumber номер места
      * @return true, если место доступно, иначе false
      */

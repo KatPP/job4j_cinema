@@ -1,6 +1,7 @@
 package ru.job4j.cinema.repository;
 
 import ru.job4j.cinema.model.User;
+
 import java.util.Optional;
 
 /**
@@ -23,7 +24,7 @@ public interface UserRepository {
     /**
      * Находит пользователя по email и паролю
      *
-     * @param email email пользователя
+     * @param email    email пользователя
      * @param password пароль пользователя
      * @return Optional с пользователем, если найден, иначе пустой Optional
      */
