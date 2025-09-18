@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
  * Модель сеанса фильма
  * Информация о показе фильма в определенное время
  *
- * @author Разработчик
+ * @author Константин
  * @version 1.0
  */
 public class FilmSession {
